@@ -7,7 +7,7 @@ function Menu() {
       <h2 className="text-3xl font-semibold text-pink-700 mb-4">🍽️ Birthday Dinner Menu</h2>
       <p className="text-white">This page will showcase the food and drink menu for the birthday party.</p>
       <img
-        src="/menu.JPG" // place your image in /public/menu.jpg or adjust the path
+        src="/menu.jpg" // place your image in /public/menu.jpg or adjust the path
         alt="Birthday Menu"
         className="mt-5 w-full max-w-2xl rounded-lg shadow-lg"
       />
