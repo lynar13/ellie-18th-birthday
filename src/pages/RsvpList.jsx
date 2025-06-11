@@ -1,6 +1,6 @@
 //src/pages/RsvpList.jsx
 import React from 'react';
-import RSVPList from '../components/RSVPList';
+import RSVPList from '../components/RsvpList';
 
 function RsvpList() {
   return (
