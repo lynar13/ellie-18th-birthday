@@ -161,7 +161,7 @@ function Gift() {
           placeholder="Your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full border p-2 rounded"
+          className="w-full border p-2 rounded text-gray-600"
           required
         />
         <textarea
