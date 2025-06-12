@@ -1,12 +1,12 @@
-//src/pages/Home.jsx
-// src/pages/Home.jsx
 import React, { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import RSVPForm from "../components/RsvpForm";
 import Slider from "react-slick";
 import { useSwipeable } from "react-swipeable";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
+import RSVPForm from "../components/RsvpForm";
+import CameraCapture from "../components/CameraCapture";
 
 function Home() {
   const navigate = useNavigate();
@@ -118,8 +118,15 @@ function Home() {
         </div>
       </section>
 
+      {/* ✅ CameraCapture visible for everyone */}
+      <section className="mt-120 flex justify-center">
+        <div className="w-full max-w-2xl">
+          <CameraCapture rsvpName={rsvpName} />
+        </div>
+      </section>
+
       {/* Slider Section */}
-      <section className="mt-110 container w-full mx-auto max-w-5xl flex flex-col justify-center">
+      <section className="mt-2 container w-full mx-auto max-w-5xl flex flex-col justify-center">
         <h2 className="p-4 text-center text-3xl">
           The Venue - Crowne Plaza Rome
         </h2>
