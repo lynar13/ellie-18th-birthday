@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-
-const sampleImages = [
-  '/photos/photo1.jpg',
-  '/photos/photo2.jpg',
-  '/photos/photo3.jpg',
-  '/photos/photo4.jpg',
-  '/photos/photo5.jpg',
-];
+import React, { useState, useEffect } from "react";
+import { db } from "../firebase";
+import { collection, getDocs, query, orderBy } from "firebase/firestore";
 
 function Gallery() {
-  const [images, setImages] = useState([]);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // Replace this with Firebase Storage or Cloud fetch later
-    setImages(sampleImages);
+    const fetchGallery = async () => {
+      const q = query(collection(db, "gallery"), orderBy("timestamp", "desc"));
+      const snapshot = await getDocs(q);
+      const data = snapshot.docs.map((doc) => doc.data());
+      setItems(data);
+    };
+
+    fetchGallery();
   }, []);
 
   return (
@@ -23,16 +23,25 @@ function Gallery() {
         Thank you for the memories! Enjoy some highlights from Grace's 75th celebration.
       </p>
 
-      {images.length > 0 ? (
+      {items.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {images.map((src, i) => (
-            <img
-              key={i}
-              src={src}
-              alt={`gallery-${i}`}
-              className="rounded-lg shadow-lg hover:scale-105 transition-transform"
-            />
-          ))}
+          {items.map((item, i) =>
+            item.type === "image" ? (
+              <img
+                key={i}
+                src={item.url}
+                alt={`gallery-${i}`}
+                className="rounded-lg shadow-lg hover:scale-105 transition-transform"
+              />
+            ) : (
+              <video
+                key={i}
+                src={item.url}
+                controls
+                className="rounded-lg shadow-lg"
+              />
+            )
+          )}
         </div>
       ) : (
         <p className="text-gray-400">No photos yet. Stay tuned!</p>
