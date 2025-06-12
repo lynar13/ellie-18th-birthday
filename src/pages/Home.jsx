@@ -89,7 +89,7 @@ function Home() {
             <h2 className="text-6xl font-bold text-white italic">75th</h2>
             <h2 className="text-6xl text-white font-bold">Birthday</h2>
             <p className="text-2xl mb-9 mt-12">
-              Cake, laughter and maybe nap after 9! <br />
+              Cake, laughter and love and maybe nap after 9! <br />
               RSVP if you're still young at heart.
             </p>
           </div>
