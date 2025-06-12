@@ -59,8 +59,11 @@ function RsvpForm() {
 
   return (
     <div className="flex flex-col justify-center items-center px-4 m-5">
-      <h1 className="text-2xl text-center"> RSVP if you're still young at heart.</h1>
-      
+      <h1 className="text-2xl text-center">
+        {" "}
+        RSVP if you're still young at heart.
+      </h1>
+
       <form
         onSubmit={handleSubmit}
         className="bg-[#9a560c] shadow-md rounded p-6 mt-6 space-y-4 max-w-md w-full"
@@ -102,8 +105,10 @@ function RsvpForm() {
           name="message"
           value={form.message}
           onChange={handleChange}
-          placeholder="Optional Message"
+          placeholder="Your message (minimum 30 characters)"
           className="placeholder w-full border p-2 rounded"
+          required
+          minLength={30}
         />
 
         <div className="flex justify-center items-center">
