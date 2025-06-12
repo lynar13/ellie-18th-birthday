@@ -83,9 +83,9 @@ function Home() {
           className="w-full max-h-[600px]"
         />
 
-        <div className="mt-100 px-4 absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white text-center">
+        <div className="mt-95 px-4 absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white text-center">
           <div className="mt-30 text-[#9a560c]">
-            <h1 className="text-7xl font-extrabold mb-2">Grace Amador</h1>
+            <h1 className="text-7xl font-extrabold mb-2">Mumy Grace</h1>
             <h2 className="text-6xl font-bold text-white italic">75th</h2>
             <h2 className="text-6xl text-white font-bold">Birthday</h2>
             <p className="text-2xl mb-9 mt-12">
@@ -95,7 +95,7 @@ function Home() {
           </div>
 
           {rsvpName ? (
-            <p className="text-green-300 font-medium mb-6">
+            <p className="text-green-300 font-medium mb-2">
               🎉 You’ve RSVPed as <strong>{rsvpName}</strong>
               {rsvpEmail && <span> ({rsvpEmail})</span>}
             </p>
@@ -119,7 +119,7 @@ function Home() {
       </section>
 
       {/* ✅ CameraCapture visible for everyone */}
-      <section className="mt-120 flex justify-center">
+      <section className="mt-110 flex justify-center">
         <div className="w-full max-w-2xl">
           <CameraCapture rsvpName={rsvpName} />
         </div>
