@@ -26,7 +26,7 @@ function Program() {
       <p className="text-xs text-yellow-700 font-italic text-white mb-8">
         "The Lord bless you and keep you; The Lord make his face shine on you
         and be gracious to you; The Lord turn his face toward you and give you
-        peace." -Numbers 6:24-26
+        peace." <br /> -Numbers 6:24-26
       </p>
 
       <div className="bg-white text-sm rounded-lg shadow-lg p-6 text-left">

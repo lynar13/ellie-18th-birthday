@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { db } from "../firebase";
+import { db, app, storage } from "../firebase";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
 
 function Gallery() {
