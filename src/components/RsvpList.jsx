@@ -42,6 +42,7 @@ export default function RSVPList() {
             <tr className="bg-[#9a560c]">
               <th className="p-2 border">Name</th>
               <th className="p-2 border">Guests</th>
+              <th className="p-2 border">Message</th>
               <th className="p-2 border">Timestamp</th>
             </tr>
           </thead>
@@ -53,10 +54,11 @@ export default function RSVPList() {
                 </td>
               </tr>
             ) : (
-              rsvps.map(({ id, name, guests, timestamp }) => (
+              rsvps.map(({ id, name, guests, message, timestamp }) => (
                 <tr key={id} className="hover:bg-[#9a560c]">
                   <td className="border p-2">{name || "—"}</td>
                   <td className="border p-2">{guests ?? 0}</td>
+                  <td className="border p-2">{message || "—"}</td>
                   <td className="border p-2">
                     {timestamp?.seconds
                       ? new Date(timestamp.seconds * 1000).toLocaleString()
