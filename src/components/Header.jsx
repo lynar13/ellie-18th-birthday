@@ -33,6 +33,14 @@ function Header() {
             About
           </NavLink>
           <NavLink
+            to="/program"
+            className={({ isActive }) =>
+              `${baseLink} ${isActive ? activeLink : ""}`
+            }
+          >
+            Program
+          </NavLink>
+          <NavLink
             to="/menu"
             className={({ isActive }) =>
               `${baseLink} ${isActive ? activeLink : ""}`

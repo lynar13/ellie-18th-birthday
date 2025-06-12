@@ -29,52 +29,69 @@ export default function RSVPList() {
   }, []);
 
   return (
-    <div className=" text-center flex flex-col max-w-3xl mx-auto mt-10 p-6 bg-black shadow-md rounded">
-      <h2 className="text-2xl font-bold mb-4 text-pink-700">
+    <div className="max-w-5xl mx-auto mt-2 px-6 py-10 bg-black text-white rounded shadow-lg">
+      <h2 className="text-3xl font-bold text-pink-600 mb-6 text-center">
         📋 RSVP Responses
       </h2>
 
       {loading ? (
-        <p className="text-center text-gray-500">Loading...</p>
+        <p className="text-center">Loading...</p>
+      ) : rsvps.length === 0 ? (
+        <p className="text-center text-gray-400">No RSVP yet.</p>
       ) : (
-        <table className="w-full border-collapse">
-          <thead>
-            <tr className="bg-[#9a560c]">
-              <th className="p-2 border">Name</th>
-              <th className="p-2 border">Guests</th>
-              <th className="p-2 border">Message</th>
-              <th className="p-2 border">Timestamp</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rsvps.length === 0 ? (
-              <tr>
-                <td colSpan="3" className="text-center py-4 text-gray-500">
-                  No RSVP yet.
-                </td>
-              </tr>
-            ) : (
-              rsvps.map(({ id, name, guests, message, timestamp }) => (
-                <tr key={id} className="hover:bg-[#9a560c]">
-                  <td className="border p-2">{name || "—"}</td>
-                  <td className="border p-2">{guests ?? 0}</td>
-                  <td className="border p-2">{message || "—"}</td>
-                  <td className="border p-2">
-                    {timestamp?.seconds
-                      ? new Date(timestamp.seconds * 1000).toLocaleString()
-                      : "—"}
-                  </td>
+        <>
+          {/* Desktop Table */}
+          <div className="hidden md:block overflow-x-auto">
+            <table className="w-full text-left border border-pink-700">
+              <thead>
+                <tr className="bg-[#9a560c] text-white">
+                  <th className="p-3 border border-pink-700">Name</th>
+                  <th className="p-3 border border-pink-700">Guests</th>
+                  <th className="p-3 border border-pink-700">Message</th>
+                  <th className="p-3 border border-pink-700">Timestamp</th>
                 </tr>
-              ))
-            )}
-          </tbody>
-        </table>
+              </thead>
+              <tbody>
+                {rsvps.map(({ id, name, guests, message, timestamp }) => (
+                  <tr key={id} className="hover:bg-[#9a560c]/50">
+                    <td className="p-3 border border-pink-700">{name || "—"}</td>
+                    <td className="p-3 border border-pink-700">{guests ?? 0}</td>
+                    <td className="p-3 border border-pink-700">{message || "—"}</td>
+                    <td className="p-3 border border-pink-700">
+                      {timestamp?.seconds
+                        ? new Date(timestamp.seconds * 1000).toLocaleString()
+                        : "—"}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Mobile Cards */}
+          <div className="md:hidden flex flex-col gap-4">
+            {rsvps.map(({ id, name, guests, message, timestamp }) => (
+              <div
+                key={id}
+                className="bg-[#1a1a1a] border border-pink-700 rounded-lg p-4 shadow"
+              >
+                <p><strong className="text-pink-500">Name:</strong> {name || "—"}</p>
+                <p><strong className="text-pink-500">Guests:</strong> {guests ?? 0}</p>
+                <p><strong className="text-pink-500">Message:</strong> {message || "—"}</p>
+                <p className="text-sm text-gray-400 mt-2">
+                  {timestamp?.seconds
+                    ? new Date(timestamp.seconds * 1000).toLocaleString()
+                    : "—"}
+                </p>
+              </div>
+            ))}
+          </div>
+        </>
       )}
 
       <button
-        type="button"
-        onClick={() => navigate(-1)} // navigates back
-        className="mt-7 w-30 flex justify-center text-white font-semibold hover:underline"
+        onClick={() => navigate(-1)}
+        className="mt-8 text-white hover:underline"
       >
         ← Back
       </button>

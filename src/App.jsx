@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Program from "./pages/Program";
 import RsvpForm from "./components/RsvpForm";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/program" element={<Program />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/rsvpform" element={<RsvpForm />} />
           <Route path="/rsvplist" element={<RsvpList />} />
