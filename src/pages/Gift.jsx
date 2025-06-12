@@ -1,5 +1,5 @@
 // src/pages/Gift.jsx
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { db } from "../firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { toast } from "react-toastify";
@@ -9,10 +9,16 @@ import axios from "axios";
 import { QRCodeCanvas } from "qrcode.react";
 
 function Gift() {
+  const [isMobile, setIsMobile] = useState(false);
   const [note, setNote] = useState("");
   const [name, setName] = useState("");
   const [loading, setLoading] = useState(false);
   const qrRef = useRef(null);
+
+  useEffect(() => {
+    const ua = navigator.userAgent.toLowerCase();
+    setIsMobile(/android|iphone|ipad|ipod/i.test(ua));
+  }, []);
 
   const handleNoteSubmit = async (e) => {
     e.preventDefault();
@@ -46,10 +52,6 @@ function Gift() {
     }
   };
 
-  const handleDownload = () => {
-    window.open("/bank-details.pdf", "_blank");
-  };
-
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-6 py-12 text-center">
       <h2 className="text-4xl font-bold text-pink-700 mb-4">
@@ -57,24 +59,33 @@ function Gift() {
       </h2>
       <p className="text-white mb-6 max-w-lg">
         Your presence is the greatest gift! But if you’d like to bless Grace
-        with a birthday token, please use the bank transfer option below 🏦
+        with a birthday token, please use the bank transfer option below
       </p>
 
-      {/* QR Code to Bank Details */}
-      <div
-        ref={qrRef}
-        className="bg-white p-4 rounded-lg shadow inline-block mb-4 cursor-pointer"
-        onClick={handleDownload}
-        title="Click to download bank details"
-      >
-        <QRCodeCanvas
-          value={`${window.location.origin}/bank-details.pdf`}
-          size={200}
-          bgColor="#ffffff"
-          fgColor="#000000"
-          level="H"
-          includeMargin
-        />
+      {/* Bank Transfer Details */}
+      <div className="bg-white p-4 rounded-lg shadow mb-6 text-center">
+        <h3 className="text-lg font-semibold mb-2 text-gray-800">
+          🏦 Bank Transfer Details
+        </h3>
+
+        {/* QR Code */}
+
+        <a
+          href="/bank-details.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mb-4"
+          title="Click or scan to download bank details"
+        >
+          <QRCodeCanvas
+            value={`${window.location.origin}/bank-details.pdf`}
+            size={180}
+            bgColor="#ffffff"
+            fgColor="#000000"
+            level="H"
+            includeMargin
+          />
+        </a>
       </div>
 
       <p className="text-white mb-8">

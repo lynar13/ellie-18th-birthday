@@ -17,7 +17,7 @@
     "canvas-confetti": "^1.9.3",
     "firebase": "^11.9.1",
     "firestore": "^1.1.6",
-    "framer-motion": "^12.16.0",
+    "framer-motion": "^12.17.3",
     "qrcode.react": "^4.2.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
