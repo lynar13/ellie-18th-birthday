@@ -89,7 +89,7 @@ function Gift() {
       </div>
 
       <p className="text-white mb-8">
-        Tap or scan the QR to download Grace’s bank details (PDF)
+        Tap or scan the QR Code to open bank details (PDF)
       </p>
 
       <p className="text-xl p-4">
