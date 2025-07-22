@@ -66,7 +66,7 @@ function RsvpForm() {
 
       <form
         onSubmit={handleSubmit}
-        className="bg-[#9a560c] shadow-md rounded p-6 mt-6 space-y-4 max-w-md w-full"
+        className="bg-[#D2042D] shadow-md rounded p-6 mt-6 space-y-4 max-w-md w-full"
       >
         <h2 className="text-white text-4xl font-bold text-center">RSVP</h2>
 

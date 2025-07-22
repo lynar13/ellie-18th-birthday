@@ -9,23 +9,24 @@ function About() {
 
       <div className="bg-pink-50 p-6 rounded shadow-md">
         <p className="text-gray-600 text-lg mb-4">
-          <strong>Date:</strong> Saturday, August 2, 2025<br />
-          <strong>Time:</strong> 5:00 PM – 11:00 PM
+          <strong>Date:</strong> Saturday, 13th September 2025<br />
+          <strong>Time:</strong> 4:00 PM – 11:30 PM
         </p>
 
         <p className="text-lg text-gray-600 mb-4">
           <strong>Address:</strong><br />
-          Crowne Plaza Rome - St. Peter's<br />
-          Via Aurelia Antica 4150<br />
-          Rome, 00165, Italy
+          Marks Tey Parish Hall<br />
+          Old London Road<br />
+          Essex, Colchester, CO6 1EJ, UK
         </p>
 
         <p className="text-lg text-gray-600">
-          <strong>Dress Code:</strong> Black Tie / Gold
+          <strong>Dress Code:</strong> Any Formal attire except Red and Gold
         </p>
+        <p className='text-2xl text-red-600 mt-5'>Arrive dressed in your best!</p>
         <img
-        src="/dress-code.jpg" 
-        alt="Birthday Menu"
+        src="/attire.png" 
+        alt="dress code"
         className="mt-5 w-full max-w-2xl rounded-lg shadow-lg"
       />
       </div>

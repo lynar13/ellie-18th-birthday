@@ -4,16 +4,16 @@ import { NavLink } from "react-router-dom";
 function Header() {
   const baseLink =
     "text-pink-700 hover:underline font-medium transition-colors";
-  const activeLink = "text-white bg-pink-700 px-2 py-1 rounded";
+  const activeLink = "text-white bg-yellow-600 px-2 py-1 rounded";
 
   return (
-    <header className="bg-[#9a560c] shadow-md py-4">
+    <header className="bg-[#D2042D] shadow-md py-4">
       <nav className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center px-4 space-y-2 sm:space-y-0">
         <NavLink
           to="/"
           className="font-extrabold text-white text-xl tracking-wide"
         >
-          🎉 Grace's 75th
+          🎉 Ashley's 18th
         </NavLink>
         <div className="flex gap-4 flex-wrap justify-center items-center text-sm sm:text-base">
           <NavLink

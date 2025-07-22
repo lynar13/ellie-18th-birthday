@@ -57,9 +57,10 @@ function Gift() {
       <h2 className="text-4xl font-bold text-pink-700 mb-4">
         💝 Send a Birthday Gift
       </h2>
-      <p className="text-white mb-6 max-w-lg">
-        Your presence is the greatest gift! But if you’d like to bless Grace
-        with a birthday token, please use the bank transfer option below
+      <p className="text-[#ffbf00] mb-6 max-w-lg">
+        Your company alone shall truly bless us above all things,
+        though if you kind-heartedly desire to bring a birthday present beside you,
+        a monetary gift would be immensely appreciated xoxoxo.
       </p>
 
       {/* Bank Transfer Details */}
@@ -95,7 +96,7 @@ function Gift() {
       <p className="text-xl p-4">
         Gift notes will be shown on a slideshow during the party 🎉
       </p>
-      <p className="text-sm text-yellow-700 p-4">
+      <p className="text-sm text-[#ffbf00] p-4">
         Note: You can submit a note without sending a gift 🎉
       </p>
 
