@@ -13,7 +13,7 @@ function Header() {
           to="/"
           className="font-extrabold text-white text-xl tracking-wide"
         >
-          🎉 Ashley's 18th
+          🎉 Ellie's 18th
         </NavLink>
         <div className="flex gap-4 flex-wrap justify-center items-center text-sm sm:text-base">
           <NavLink
@@ -40,14 +40,7 @@ function Header() {
           >
             Program
           </NavLink>
-          <NavLink
-            to="/menu"
-            className={({ isActive }) =>
-              `${baseLink} ${isActive ? activeLink : ""}`
-            }
-          >
-            Menu
-          </NavLink>
+          
           <NavLink
             to="/rsvplist"
             className={({ isActive }) =>

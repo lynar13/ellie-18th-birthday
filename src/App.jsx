@@ -11,7 +11,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import RsvpList from "./pages/RsvpList";
 import Gift from "./pages/Gift";
-import Menu from "./pages/Menu";
 import GiftNotes from "./pages/GiftNotes";
 import Gallery from "./pages/Gallery";
 
@@ -27,7 +26,6 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/rsvpform" element={<RsvpForm />} />
           <Route path="/rsvplist" element={<RsvpList />} />
-          <Route path="/menu" element={<Menu />} />
           <Route path="/gift" element={<Gift />} />
           <Route path="/gift-notes" element={<GiftNotes />} />
         </Routes>

@@ -5,30 +5,42 @@ function About() {
 
   return (
     <div className="max-w-xl mx-auto px-4 py-10 text-center">
-      <h2 className="text-3xl font-bold text-pink-700 mb-6">📅 Birthday Details</h2>
+      <h2 className="text-3xl font-bold text-pink-700 mb-6">
+        📅 Birthday Details
+      </h2>
 
       <div className="bg-pink-50 p-6 rounded shadow-md">
         <p className="text-gray-600 text-lg mb-4">
-          <strong>Date:</strong> Saturday, 13th September 2025<br />
-          <strong>Time:</strong> 4:00 PM – 11:30 PM
+          <strong>Date:</strong> Friday, 31st October 2025
+          <br />
+          <strong>Time:</strong> 17:00 – 23:00
         </p>
 
         <p className="text-lg text-gray-600 mb-4">
-          <strong>Address:</strong><br />
-          Marks Tey Parish Hall<br />
-          Old London Road<br />
-          Essex, Colchester, CO6 1EJ, UK
+          <strong>Address:</strong>
+          <br />
+          To be confirmed
+          <br />
+          Strømmen
+          <br />
         </p>
 
         <p className="text-lg text-gray-600">
-          <strong>Dress Code:</strong> Any Formal attire except Red and Gold
+          <strong>Dress Code:</strong> Sonic/Halloween Costume or any casual attire
         </p>
-        <p className='text-2xl text-red-600 mt-5'>Arrive dressed in your best!</p>
+        <p className="text-2xl text-red-600 mt-5">
+          Arrive dressed in your best!
+        </p>
         <img
-        src="/attire.png" 
-        alt="dress code"
-        className="mt-5 w-full max-w-2xl rounded-lg shadow-lg"
-      />
+          src="/sonic.webp"
+          alt="dress code"
+          className="mt-5 w-full max-w-2xl rounded-lg shadow-lg"
+        />
+        <img
+          src="/halloween.jpg"
+          alt="dress code"
+          className="mt-5 w-full max-w-2xl rounded-lg shadow-lg"
+        />
       </div>
       <button
         type="button"

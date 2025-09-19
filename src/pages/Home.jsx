@@ -85,8 +85,8 @@ function Home() {
 
         <div className="mt-55 px-4 absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white text-center">
           <div className="mt-30 text-[#ffbf00]">
-            <h1 className="text-6xl font-extrabold mb-2">Ashley Dominique</h1>
-            <h2 className="text-6xl font-bold text-white italic">75th</h2>
+            <h1 className="text-6xl font-extrabold mb-2">Ellie's</h1>
+            <h2 className="text-6xl font-bold text-white italic">18th</h2>
             <h2 className="text-6xl text-white font-bold">Birthday</h2>
             <p className="text-2xl mb-5 mt-12">
               Roses, candles, dance, laughter and love! <br />
@@ -128,7 +128,7 @@ function Home() {
       {/* Slider Section */}
       <section className="mt-2 container w-full mx-auto max-w-5xl flex flex-col justify-center">
         <h2 className="p-4 text-center text-3xl">
-          The Venue - Marks Tey Parish Hall
+          The Venue - To be confirmed
         </h2>
 
         <div className="relative group" {...swipeHandlers}>
