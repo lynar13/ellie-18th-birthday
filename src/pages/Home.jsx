@@ -89,9 +89,9 @@ function Home() {
             <h2 className="text-6xl font-bold text-white italic">18th</h2>
             <h2 className="text-6xl text-white font-bold">Birthday</h2>
             <p className="text-2xl mb-5 mt-12">
-              Roses, candles, dance, laughter and love! <br />
+              Music, sing, dance, laughter and love! <br />
             </p>
-            <p className="text-white">RSVP strictly by Sunday 10th August 2025.</p>
+            <p className="text-white">RSVP by Friday 10th October 2025.</p>
           </div>
 
           {rsvpName ? (

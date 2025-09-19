@@ -61,7 +61,7 @@ function RsvpForm() {
     <div className="flex flex-col justify-center items-center px-4 m-5">
       <h1 className="text-2xl text-center">
         {" "}
-        RSVP if you're still young at heart.
+        RSVP and let's have some fun!.
       </h1>
 
       <form
