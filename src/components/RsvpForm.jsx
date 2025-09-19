@@ -58,11 +58,8 @@ function RsvpForm() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col justify-center items-center px-4 m-5">
-      <h1 className="text-2xl text-center">
-        {" "}
-        RSVP and let's have some fun!.
-      </h1>
+    <div className="flex flex-col justify-center items-center px-4">
+      <h1 className="text-2xl text-center"> RSVP and let's have some fun!.</h1>
 
       <form
         onSubmit={handleSubmit}

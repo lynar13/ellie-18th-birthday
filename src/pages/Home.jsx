@@ -76,18 +76,23 @@ function Home() {
   return (
     <div className="p-4 flex flex-col sm:flex-col justify-center">
       {/* Hero Section */}
-      <section className="w-full relative">
-        {/* <img
-          src="/banner-mami.png"
-          alt="birthday banner"
-          className="w-full max-h-[600px]"
-        /> */}
-
-        <div className="mt-55 px-4 absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-white text-center">
-          <div className="mt-30 text-[#ffbf00]">
-            <h1 className="text-6xl font-extrabold mb-2">Ellie's</h1>
-            <h2 className="text-6xl font-bold text-white italic">18th</h2>
-            <h2 className="text-6xl text-white font-bold">Birthday</h2>
+      <section className="w-full h-[90vh] relative">
+        <img
+          src="/shadow.avif"
+          alt="Hero"
+          className="absolute inset-0 w-full h-100 object-cover rounded-2xl mb-50"
+        />
+      </section>
+      <section>
+        <div className="mt-190 px-4 absolute inset-0 bg-opacity-40 flex flex-col justify-center items-center text-white text-center">
+          <div className="text-[#ffbf00]">
+            <div className="">
+              <h1 className="text-9xl font-[cursive] font-extrabold">
+                Ellie's
+              </h1>
+              <h2 className="text-6xl font-bold text-white italic">18th</h2>
+              <h2 className="text-6xl text-white font-bold">Birthday</h2>
+            </div>
             <p className="text-2xl mb-5 mt-12">
               Music, sing, dance, laughter and love! <br />
             </p>
@@ -100,7 +105,7 @@ function Home() {
               {rsvpEmail && <span> ({rsvpEmail})</span>}
             </p>
           ) : (
-            <div className="flex gap-4 mt-2 mb-9">
+            <div className="flex gap-4 mt-2 mb-2">
               <button
                 onClick={handleRsvpClick}
                 className="bg-pink-600 hover:bg-pink-700 transition-colors text-white font-semibold px-4 py-2 rounded-full"
@@ -119,7 +124,7 @@ function Home() {
       </section>
 
       {/* ✅ CameraCapture visible for everyone */}
-      <section className="mt-110 flex justify-center">
+      <section className="flex justify-center mt-75">
         <div className="w-full max-w-2xl">
           <CameraCapture rsvpName={rsvpName} />
         </div>

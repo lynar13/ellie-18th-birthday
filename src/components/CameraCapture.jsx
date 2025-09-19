@@ -106,7 +106,7 @@ export default function CameraCapture({ rsvpName }) {
   }, []);
 
   return (
-    <div className="text-center mt-10">
+    <div className="text-center mt-2">
       <h3 className="text-white text-lg font-semibold mb-2">
         📷 Upload a Memory
       </h3>
