@@ -25,12 +25,12 @@ function Header() {
             Home
           </NavLink>
           <NavLink
-            to="/about"
+            to="/event"
             className={({ isActive }) =>
               `${baseLink} ${isActive ? activeLink : ""}`
             }
           >
-            About
+            Event
           </NavLink>
           <NavLink
             to="/program"

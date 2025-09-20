@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Home from "./pages/Home";
-import About from "./pages/About";
+import Event from "./pages/Event";
 import Program from "./pages/Program";
 import RsvpForm from "./components/RsvpForm";
 import Header from "./components/Header";
@@ -21,7 +21,7 @@ function App() {
       <main className="min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/event" element={<Event />} />
           <Route path="/program" element={<Program />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/rsvpform" element={<RsvpForm />} />

@@ -30,6 +30,7 @@ function Home() {
 
   const handleRsvpClick = () => navigate("/rsvpform");
   const handleGiftClick = () => navigate("/gift");
+  const handleEventInfoClick = () => navigate("/event");
 
   const sliderImages = ["/venue1.jpg", "/venue2.jpg", "/venue3.jpg"];
 
@@ -105,18 +106,26 @@ function Home() {
               {rsvpEmail && <span> ({rsvpEmail})</span>}
             </p>
           ) : (
-            <div className="flex gap-4 mt-2 mb-2">
+            <div className="flex flex-col gap-3 mt-2 mb-2">
+              <div className="flex gap-4 justify-center">
+                <button
+                  onClick={handleRsvpClick}
+                  className="bg-pink-600 hover:bg-pink-700 transition-colors text-white font-semibold px-4 py-2 rounded-full"
+                >
+                  RSVP Now
+                </button>
+                <button
+                  onClick={handleGiftClick}
+                  className="bg-yellow-500 hover:bg-yellow-600 transition-colors text-white font-semibold px-4 py-2 rounded-full"
+                >
+                  Send a Gift 🎁
+                </button>
+              </div>
               <button
-                onClick={handleRsvpClick}
-                className="bg-pink-600 hover:bg-pink-700 transition-colors text-white font-semibold px-4 py-2 rounded-full"
+                onClick={handleEventInfoClick}
+                className="bg-purple-600 hover:bg-purple-700 transition-colors text-white font-semibold px-4 py-2 rounded-full w-fit mx-auto"
               >
-                RSVP Now
-              </button>
-              <button
-                onClick={handleGiftClick}
-                className="bg-yellow-500 hover:bg-yellow-600 transition-colors text-white font-semibold px-4 py-2 rounded-full"
-              >
-                Send a Gift 🎁
+                Event Info ℹ️
               </button>
             </div>
           )}
@@ -124,7 +133,7 @@ function Home() {
       </section>
 
       {/* ✅ CameraCapture visible for everyone */}
-      <section className="flex justify-center mt-75">
+      <section className="flex justify-center mt-80">
         <div className="w-full max-w-2xl">
           <CameraCapture rsvpName={rsvpName} />
         </div>

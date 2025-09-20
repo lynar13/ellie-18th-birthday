@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-function About() {
+function Event() {
   const navigate = useNavigate();
 
   return (
@@ -53,5 +53,5 @@ function About() {
   );
 }
 
-export default About;
+export default Event;
 
