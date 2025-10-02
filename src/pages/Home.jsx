@@ -32,7 +32,12 @@ function Home() {
   const handleGiftClick = () => navigate("/gift");
   const handleEventInfoClick = () => navigate("/event");
 
-  const sliderImages = ["/venue1.jpg", "/venue2.jpg", "/venue3.jpg"];
+  const sliderImages = [
+    "/lokale-1.jpg",
+    "/lokale-2.jpg",
+    "/lokale-3.jpg",
+    "/lokale-4.jpg",
+  ];
 
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => sliderRef.current?.slickNext(),
@@ -142,7 +147,7 @@ function Home() {
       {/* Slider Section */}
       <section className="mt-2 container w-full mx-auto max-w-5xl flex flex-col justify-center">
         <h2 className="p-4 text-center text-3xl">
-          The Venue - To be confirmed
+          The Venue - Folkets Hus Strømmen
         </h2>
 
         <div className="relative group" {...swipeHandlers}>

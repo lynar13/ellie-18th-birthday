@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { useNavigate } from "react-router-dom";
 function Event() {
   const navigate = useNavigate();
@@ -13,20 +13,19 @@ function Event() {
         <p className="text-gray-600 text-lg mb-4">
           <strong>Date:</strong> Friday, 31st October 2025
           <br />
-          <strong>Time:</strong> 17:00 – 23:00
+          <strong>Time:</strong> 17:00 – 01:00
         </p>
 
         <p className="text-lg text-gray-600 mb-4">
-          <strong>Address:</strong>
+          <strong>Address:</strong> Folkets Hus Strømmen(FHS)
           <br />
-          To be confirmed
-          <br />
-          Strømmen
+          Strømsveien 61, 2010 Strømmen
           <br />
         </p>
 
         <p className="text-lg text-gray-600">
-          <strong>Dress Code:</strong> Sonic/Halloween Costume or any casual attire
+          <strong>Dress Code:</strong> Sonic/Halloween Costume <br />or any casual
+          attire
         </p>
         <p className="text-2xl text-red-600 mt-5">
           Arrive dressed in your best!
@@ -54,4 +53,3 @@ function Event() {
 }
 
 export default Event;
-
