@@ -57,7 +57,7 @@ function Gift() {
       <h2 className="text-4xl font-bold text-pink-700 mb-4">
         💝 Send a Birthday Gift
       </h2>
-      <p className="text-[#ffbf00] mb-6 max-w-lg">
+      <p className="text-white text-sm mb-6 max-w-lg">
         Your company alone shall truly bless us above all things, though if you
         kind-heartedly desire to bring a birthday present beside you, a monetary
         gift would be immensely appreciated xoxoxo.
@@ -69,26 +69,11 @@ function Gift() {
 
         {/* QR Code */}
 
-        <a
-          href="/Vipps.webp"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block mb-4"
-          title="Click or scan to download vipps details"
-        >
-          <QRCodeCanvas
-            value={`${window.location.origin}/bank-details.png`}
-            size={180}
-            bgColor="#ffffff"
-            fgColor="#000000"
-            level="H"
-            includeMargin
-          />
-        </a>
+        <img className="vipps" src="/vipps.jpg" alt="jpg" />
       </div>
 
       <p className="text-white mb-8">
-        Tap or scan the QR Code to Vipps Ellie (PDF)
+        Scan the QR Code to Vipps Ellie (PDF)
       </p>
 
       <p className="text-xl p-4">

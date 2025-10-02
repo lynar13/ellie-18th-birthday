@@ -102,7 +102,7 @@ function Home() {
             <p className="text-2xl mb-5 mt-12">
               Music, sing, dance, laughter and love! <br />
             </p>
-            <p className="text-white">RSVP by Friday 10th October 2025.</p>
+            <p className="text-white">RSVP by Friday 15th October 2025.</p>
           </div>
 
           {rsvpName ? (
