@@ -28,11 +28,23 @@ export default function RSVPList() {
     fetchRSVPs();
   }, []);
 
+  // Calculate total guests
+  const totalGuests = rsvps.reduce(
+    (sum, { guests }) => sum + (Number(guests) || 0),
+    0
+  );
+
   return (
     <div className="max-w-5xl mx-auto mt-2 px-6 py-10 bg-black text-white rounded shadow-lg">
-      <h2 className="text-3xl font-bold text-pink-600 mb-6 text-center">
+      <h2 className="text-3xl font-bold text-pink-600 mb-2 text-center">
         📋 RSVP Responses
       </h2>
+
+      {!loading && rsvps.length > 0 && (
+        <p className="text-center text-lg text-gray-300 mb-6">
+          🎉 Total Guests: <span className="font-semibold">{totalGuests}</span>
+        </p>
+      )}
 
       {loading ? (
         <p className="text-center">Loading...</p>
@@ -54,9 +66,15 @@ export default function RSVPList() {
               <tbody>
                 {rsvps.map(({ id, name, guests, message, timestamp }) => (
                   <tr key={id} className="hover:bg-[#9a560c]/50">
-                    <td className="p-3 border border-pink-700">{name || "—"}</td>
-                    <td className="p-3 border border-pink-700">{guests ?? 0}</td>
-                    <td className="p-3 border border-pink-700">{message || "—"}</td>
+                    <td className="p-3 border border-pink-700">
+                      {name || "—"}
+                    </td>
+                    <td className="p-3 border border-pink-700">
+                      {guests ?? 0}
+                    </td>
+                    <td className="p-3 border border-pink-700">
+                      {message || "—"}
+                    </td>
                     <td className="p-3 border border-pink-700">
                       {timestamp?.seconds
                         ? new Date(timestamp.seconds * 1000).toLocaleString()
@@ -75,9 +93,17 @@ export default function RSVPList() {
                 key={id}
                 className="bg-[#1a1a1a] border border-pink-700 rounded-lg p-4 shadow"
               >
-                <p><strong className="text-pink-500">Name:</strong> {name || "—"}</p>
-                <p><strong className="text-pink-500">Guests:</strong> {guests ?? 0}</p>
-                <p><strong className="text-pink-500">Message:</strong> {message || "—"}</p>
+                <p>
+                  <strong className="text-pink-500">Name:</strong> {name || "—"}
+                </p>
+                <p>
+                  <strong className="text-pink-500">Guests:</strong>{" "}
+                  {guests ?? 0}
+                </p>
+                <p>
+                  <strong className="text-pink-500">Message:</strong>{" "}
+                  {message || "—"}
+                </p>
                 <p className="text-sm text-gray-400 mt-2">
                   {timestamp?.seconds
                     ? new Date(timestamp.seconds * 1000).toLocaleString()
